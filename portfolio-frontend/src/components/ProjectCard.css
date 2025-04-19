@@ -1,0 +1,67 @@
+/* ProjectCard.css */
+
+.project-card {
+  background-color: #1a1a1a;
+  border-radius: 8px;
+  overflow: hidden; /* Hide any image overflow */
+  box-shadow: 0 4px 8px rgba(210, 183, 183, 0.2);
+  transition: transform 0.3s ease-in-out;
+  display: flex; /* Use flexbox for layout of image and info */
+  flex-direction: column; /* Stack image and info vertically by default */
+}
+
+.project-card:hover {
+  transform: translateY(-5px);
+}
+
+.project-image {
+  width: 100%;
+  height: auto;
+  display: block; /* Prevent extra space below image */
+}
+
+.project-info {
+  padding: 20px;
+  color: #e0e0e0;
+}
+
+.project-info h3 {
+  margin-top: 0;
+  margin-bottom: 10px;
+  color: #fff;
+  font-size: 1.5em;
+}
+
+.project-info p {
+  font-size: 1em;
+  line-height: 1.6;
+  margin-bottom: 0;
+}
+
+/* Responsive adjustments */
+@media (min-width: 768px) {
+  .project-card {
+    flex-direction: row; /* Display image and info in a row on larger screens */
+    align-items: center; /* Vertically align items in the row */
+  }
+
+  .project-image {
+    width: 50%; /* Take up half the width */
+    height: auto;
+  }
+
+  .project-info {
+    width: 50%; /* Take up the other half */
+    padding: 20px;
+  }
+}
+
+@media (max-width: 600px) {
+  .project-info h3 {
+    font-size: 1.3em;
+  }
+
+  .project-info p {
+    font-size: 0.9em;
+  }
+}

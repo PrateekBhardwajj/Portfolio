@@ -1,0 +1,25 @@
+/* In your global CSS file */
+body {
+  position: relative; /* Or the main container of your app */
+}
+
+body::before {
+  content: "";
+  position: fixed;
+  top: 0;
+  left: 0;
+  width: 100%;
+  height: 100%;
+  background-color: rgba(0, 0, 0, 0.2); /* Subtle dark grey */
+  pointer-events: none;
+  z-index: 9999; /* Ensure it's on top */
+}
+
+code {
+  font-family: source-code-pro, Menlo, Monaco, Consolas, 'Courier New',
+    monospace;
+}
+
+html {
+  scroll-padding-top: 80px; /* Replace 60px with the actual height of your navbar */
+}

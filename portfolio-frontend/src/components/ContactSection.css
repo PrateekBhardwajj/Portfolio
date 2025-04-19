@@ -1,0 +1,101 @@
+/* ContactSection.css */
+
+.contact-section {
+    padding: 40px 20px;
+    color: #e0e0e0;
+    display: flex;
+    flex-direction: column;
+    align-items: center;
+    background-color: #070303; /* Same background as other sections */
+    min-height: calc(100vh - 60px); /* Adjust for navbar height */
+  }
+  
+  .contact-heading {
+    font-size: 3em;
+    margin-bottom: 20px;
+    color: #fff;
+    text-align: center;
+  }
+  
+  .contact-intro {
+    font-size: 1.1em;
+    line-height: 1.7;
+    text-align: center;
+    margin-bottom: 30px;
+    max-width: 70%;
+    color: #ddd;
+  }
+  
+  .contact-form-wrapper {
+    width: 80%;
+    max-width: 600px;
+    margin-bottom: 30px;
+  }
+  
+  .contact-form {
+    display: flex;
+    flex-direction: column;
+  }
+  
+  .form-group {
+    margin-bottom: 20px;
+  }
+  
+  .form-group label {
+    display: block;
+    font-size: 1em;
+    color: #bbb;
+    margin-bottom: 5px;
+    text-align: left;
+  }
+  
+  .form-group input[type="text"],
+  .form-group input[type="email"],
+  .form-group textarea {
+    width: 100%;
+    padding: 10px;
+    font-size: 1em;
+    border: 1px solid #333;
+    border-radius: 5px;
+    background-color: #1a1a1a;
+    color: #eee;
+  }
+  
+  .form-group textarea {
+    resize: vertical;
+  }
+  
+  .submit-button {
+    background-color: #1976d2; /* Blue button */
+    color: white;
+    padding: 10px 20px;
+    border: none;
+    border-radius: 5px;
+    font-size: 1em;
+    cursor: pointer;
+    transition: background-color 0.3s ease;
+  }
+  
+  .submit-button:hover {
+    background-color: #1565c0; /* Darker blue on hover */
+  }
+  
+  .contact-info {
+    text-align: center;
+    font-size: 1em;
+    color: #bbb;
+  }
+  
+  .contact-info p {
+    margin-bottom: 10px;
+  }
+  
+  /* Responsive adjustments */
+  @media (max-width: 768px) {
+    .contact-form-wrapper {
+      width: 95%;
+    }
+    .contact-intro {
+      max-width: 90%;
+    }
+  }

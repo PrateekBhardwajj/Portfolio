@@ -1,0 +1,49 @@
+/* App.css (or Layout.css) */
+body,
+.layout-container {
+  margin: 0;
+  font-family: sans-serif;
+  background-image: linear-gradient(to bottom right, #070303, #1a1a1a);
+  background-color: rgba(0, 0, 0, 0.3);
+  color: #fff;
+  min-height: 100vh;
+  position: relative;
+  width: 100%; /* Ensure body takes full width */
+}
+
+/* Overlay gradients for the side "blue" effect */
+body,
+.layout-container {
+  background-image: linear-gradient(to bottom right, #070303, #1a1a1a),
+    linear-gradient(
+      to right,
+      transparent 0%,
+      rgba(0, 123, 255, 0.8) 20%,
+      rgba(0, 123, 255, 0.8) 20%,
+      transparent 100%
+    ),
+    linear-gradient(
+      to left,
+      transparent 0%,
+      rgba(0, 123, 255, 0.8) 20%,
+      rgba(0, 123, 255, 0.8) 20%,
+      transparent 100%
+    );
+  background-repeat: no-repeat;
+}
+
+.main-content-wrapper {
+  display: flex;
+  flex-direction: row; /* Change to row for horizontal layout */
+  padding-top: 60px;
+  background-color: transparent; /* Ensure wrapper doesn't have a background */
+  justify-content: space-between; /* Optional: Adjust spacing between items */
+  width: 100%; /* Ensure it takes full width */
+}
+
+section {
+  flex: 1; /* Allow sections to grow and fill space */
+  min-width: 300px; /* Set a minimum width for each section */
+  padding: 0px; /* Add padding for better spacing */
+  box-sizing: border-box; /* Ensure padding is included in width */
+}

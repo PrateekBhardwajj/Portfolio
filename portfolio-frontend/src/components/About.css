@@ -1,0 +1,223 @@
+/* About.css */
+
+.about-section {
+  padding: 10px;
+  color: #ffffff;
+  display: flex;
+  flex-direction: column;
+  align-items: center;
+  text-align: center;
+  background-color: black !important;
+  min-height: calc(100vh - 0px);
+  margin: 0;
+}
+
+.about-heading {
+  font-size: 3em;
+  margin-bottom: 30px; /* Reduced margin to make space for the line */
+  margin: 0;
+  padding: 10px 0;
+  color: #ffffff; /* Ensure white heading */
+  position: relative; /* To position the pseudo-element */
+}
+
+/* Small blue line below the main "ABOUT ME" heading */
+.about-heading::after {
+  content: '';
+  position: absolute;
+  left: 50%;
+  bottom: -5px; /* Adjust position as needed */
+  transform: translateX(-50%);
+  width: 50px; /* Adjust width of the line */
+  height: 3px;
+  background-color: #1976d2; /* Blue color */
+}
+
+.heading-separator {
+  width: 50px;
+  height: 1px;
+  background-color: #1976d2;
+  margin-bottom: 20px;
+}
+
+.intro-paragraph {
+  font-size: 1.1em;
+  line-height: 1.7;
+  margin-bottom: 20px;
+  max-width: 70%;
+  color: #ffffff; /* Ensure white paragraph text */
+}
+
+.main-content {
+  display: flex;
+  width: 80%;
+  gap: 40px; /* Increased gap for spacing between sections */
+  margin-bottom: 40px;
+  flex-wrap: wrap;
+  justify-content: space-between;
+}
+
+.about-me-subsection {
+  flex: 1;
+  min-width: 300px;
+  color: #ffffff;
+  text-align: left;
+}
+
+.about-me-subsection h2 {
+  font-size: 2em;
+  margin-bottom: 10px; /* Reduced margin above the paragraph */
+  text-align: left;
+  color: #ffffff;
+}
+
+.about-me-subsection p {
+  font-size: 1em;
+  line-height: 1.7;
+  margin-bottom: 20px;
+  text-align: left;
+  color: #ffffff;
+}
+
+.about-me-subsection .last-paragraph {
+  margin-bottom: 40px; /* Add margin to the last paragraph */
+}
+
+.skills-subsection {
+  flex: 1;
+  min-width: 300px;
+  color: #ffffff;
+  text-align: left;
+  /* Move the entire skills subsection to the right */
+  margin-left: 30px; /* Adjust the value as needed */
+}
+
+.skills-subsection h2 {
+  font-size: 2em;
+  margin-bottom: 20px;
+  text-align: left;
+  color: #ffffff;
+}
+
+.skills-grid {
+  display: grid;
+  grid-template-columns: repeat(auto-fit, minmax(100px, 1fr));
+  gap: 10px;
+  margin-top: 20px;
+  /* Move the skills grid to the right */
+  margin-left: auto; /* Push to the right */
+}
+
+.skill-box {
+  background-color: #212121;
+  color: #fff;
+  border-radius: 5px;
+  font-size: 0.9em;
+  text-align: center;
+  padding: 10px 15px;
+}
+
+.contact-button {
+  background-color: #1976d2;
+  color: white;
+  padding: 10px 20px;
+  border: none;
+  border-radius: 5px;
+  font-size: 1em;
+  cursor: pointer;
+  transition: background-color 0.3s ease;
+  display: inline-block;
+  margin-top: 15px; /* Adjust this value to move the button down */
+}
+
+.contact-button:hover {
+  background-color: #1565c0;
+}
+
+@media (max-width: 768px) {
+  .main-content {
+    flex-direction: column;
+    align-items: center;
+    width: 90%;
+    gap: 20px; /* Adjust gap for smaller screens */
+  }
+
+  .intro-paragraph {
+    max-width: 90%;
+    margin-top: 30px;
+  }
+
+  .about-me-subsection,
+  .skills-subsection {
+    flex: 1; 
+    min-width: 300px;
+    color: #ffffff;
+    text-align: center; /* Center text on smaller screens */
+    padding-top: 30px;
+    margin-left: 0; /* Reset margin for smaller screens */
+  }
+
+  .skills-subsection h2 {
+    text-align: center;
+  }
+
+  .skills-grid {
+    margin-left: auto; /* Push to the right */
+    margin-right: auto; /* Center the grid on smaller screens */
+  }
+
+  .about-me-subsection p {
+    text-align: left;
+  }
+}
+
+/* Animations */
+.initial-hidden {
+  opacity: 0;
+  transform: translateY(20px); /* Default for slide up */
+}
+
+.slideInUp {
+  animation: slideInUp 0.6s ease-out forwards;
+}
+
+.fadeIn {
+  animation: fadeIn 0.8s ease-out forwards;
+}
+
+.slideInLeft {
+  animation: slideInLeft 0.6s ease-out forwards;
+}
+
+.slideInRight {
+  animation: slideInRight 0.6s ease-out forwards;
+}
+
+.scaleUp {
+  animation: scaleUp 0.5s ease-out forwards;
+}
+
+@keyframes slideInUp {
+  0% { opacity: 0; transform: translateY(20px); }
+  100% { opacity: 1; transform: translateY(0); }
+}
+
+@keyframes fadeIn {
+  0% { opacity: 0; }
+  100% { opacity: 1; }
+}
+
+@keyframes slideInLeft {
+  0% { opacity: 0; transform: translateX(-20px); }
+  100% { opacity: 1; transform: translateX(0); }
+}
+
+@keyframes slideInRight {
+  0% { opacity: 0; transform: translateX(20px); }
+  100% { opacity: 1; transform: translateX(0); }
+}
+
+@keyframes scaleUp {
+  0% { opacity: 0; transform: scale(0.9); }
+  100% { opacity: 1; transform: scale(1); }
+}
