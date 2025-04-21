@@ -29,7 +29,7 @@ const Contact = () => {
       form.append('email', formData.email);
       form.append('message', formData.message);
   
-      const response = await fetch('http://127.0.0.1:8000/contact/', {
+      const response = await fetch(`${process.env.REACT_APP_API_URL}/contact/`, {
         method: 'POST',
         body: form,
       });
