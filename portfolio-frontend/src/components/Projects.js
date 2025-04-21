@@ -20,7 +20,7 @@ function ProjectsContent() {
       title: 'Iris Detection',
       description:
         'Designed an iris detection model utilizing computer vision techniques to identify and segment the iris region from eye images. This technology is widely used in biometric identification and security systems, deepening my understanding of machine learning and deep learning.',
-      imageUrl: '/images/irisdetection.png',
+      imageUrl: '/images/Irisdetection.png',
     },
   ];
 
